@@ -20,21 +20,21 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var SketchExample = function (_Component) {
-  _inherits(SketchExample, _Component);
+var PickerComponent = function (_Component) {
+  _inherits(PickerComponent, _Component);
 
-  function SketchExample() {
+  function PickerComponent() {
     var _ref;
 
     var _temp, _this, _ret;
 
-    _classCallCheck(this, SketchExample);
+    _classCallCheck(this, PickerComponent);
 
     for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
       args[_key] = arguments[_key];
     }
 
-    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = SketchExample.__proto__ || Object.getPrototypeOf(SketchExample)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = PickerComponent.__proto__ || Object.getPrototypeOf(PickerComponent)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
       displayColorPicker: false,
       color: {
         r: '255',
@@ -57,7 +57,7 @@ var SketchExample = function (_Component) {
     }, _temp), _possibleConstructorReturn(_this, _ret);
   }
 
-  _createClass(SketchExample, [{
+  _createClass(PickerComponent, [{
     key: 'render',
     value: function render() {
       var pickerStyles = {
@@ -95,7 +95,7 @@ var SketchExample = function (_Component) {
           style: pickerStyles.cover,
           onClick: this.handleClose
         }),
-        _react2.default.createElement(_reactColor.SketchPicker, {
+        _react2.default.createElement(_reactColor.TwitterPicker, {
           color: this.props.color || this.state.color,
           onChange: this.handleChange,
           presetColors: this.props.presetColors
@@ -118,7 +118,7 @@ var SketchExample = function (_Component) {
     }
   }]);
 
-  return SketchExample;
+  return PickerComponent;
 }(_react.Component);
 
-exports.default = SketchExample;
+exports.default = PickerComponent;
