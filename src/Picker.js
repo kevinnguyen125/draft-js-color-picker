@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { SketchPicker } from 'react-color';
+import { TwitterPicker } from 'react-color';
 
-class SketchExample extends Component {
+class PickerComponent extends Component {
   state = {
     displayColorPicker: false,
     color: {
@@ -60,7 +60,7 @@ class SketchExample extends Component {
           style={pickerStyles.cover}
           onClick={this.handleClose}
         />
-        <SketchPicker
+        <TwitterPicker
           color={this.props.color || this.state.color}
           onChange={this.handleChange}
           presetColors={this.props.presetColors}
@@ -82,4 +82,4 @@ class SketchExample extends Component {
   }
 }
 
-export default SketchExample;
+export default PickerComponent;
