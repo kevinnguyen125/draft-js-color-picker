@@ -3,7 +3,7 @@ import ColorPicker from './Picker';
 
 const { styles, customStyleFn, exporter } = createStyles(['color'], 'CUSTOM_');
 
-const addColor = (updateEditorState, getEditorState) => color => {
+const addColor = (updateEditorState, getEditorState) => (color) => {
   return updateEditorState(styles.color.add(getEditorState(), color));
 };
 
@@ -22,5 +22,3 @@ export const colorPickerPlugin = (updateEditorState, getEditorState) => ({
 });
 
 export default ColorPicker;
-
-
